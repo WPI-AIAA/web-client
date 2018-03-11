@@ -8,6 +8,10 @@ class App extends Component {
   constructor() {
     super();
     // Handle any DB Initialization
+
+    this.state = {
+      sourceURL: "http://ec2-13-58-80-79.us-east-2.compute.amazonaws.com:8080"
+    }
   }
 
   render() {
@@ -16,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <Login />
+        <Login sourceURL={this.state.sourceURL}/>
       </div>
     );
 
