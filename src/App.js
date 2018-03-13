@@ -10,8 +10,8 @@ import PageNotFound from './components/pagenotfound/PageNotFound';
 
 class App extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     // Handle any DB Initialization
 
     this.state = {
@@ -30,7 +30,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About}/>
-          <Route exact path="/login" render={props => <Login sourceURL={this.state.sourceURL}/>} />
+          <Route path="/login" render={({match}) => <Login match={match} sourceURL={this.state.sourceURL}/>} />
           <Route exact path="/schedule" component={Schedule} />
           <Route component={PageNotFound} />
         </Switch>

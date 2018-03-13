@@ -4,8 +4,8 @@ import Student from './Student'
 
 class Location extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.kickStudent = this.kickStudent.bind(this);
 
@@ -49,6 +49,8 @@ class Location extends Component {
             });
 
         }
+
+        console.log(this.props.match.path);
 
         return (
             <div className="Location" id={this.props.locationName}>
