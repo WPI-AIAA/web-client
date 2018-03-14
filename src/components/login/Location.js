@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Location.css';
+
 import Student from './Student'
 
 class Location extends Component {
@@ -8,6 +10,7 @@ class Location extends Component {
         super(props);
 
         this.kickStudent = this.kickStudent.bind(this);
+        this.logStudent = this.logStudent.bind(this);
 
         this.state = {
             presentStudentList: []
@@ -15,6 +18,8 @@ class Location extends Component {
     }
 
     componentWillMount(){
+
+        // Get Data from Data Base
         fetch(this.props.sourceURL + "/stats/students")
             .then(response => response.json())
             .then(data => this.setState({presentStudentList: data}));
@@ -30,6 +35,22 @@ class Location extends Component {
 
         // Set the state to the new list without the kicked student
         this.setState({ presentStudentList: newStudentList });
+
+        // Erase and refocus on the text field
+        this.refs.login.value = "";
+        this.refs.login.focus();
+    }
+
+    logStudent(event) {
+        event.preventDefault(); // Prevents the page from reloading
+
+        // Store the entered value so we can use it later
+        let enteredValue = this.refs.login.value;
+
+        // Reset the entered value to ""
+        this.refs.login.value = "";
+
+        //TODO: Parse swipe, send Login Info to server
     }
 
     render() {
@@ -50,15 +71,22 @@ class Location extends Component {
 
         }
 
-        console.log(this.props.match.path);
-
+        // Render the Display
         return (
             <div className="Location" id={this.props.locationName}>
-                <h1> {this.props.locationName} </h1>
+
+                <img src={"/images/" + this.props.locationName + ".png"} alt={this.props.locationName}/>
+
+                <p> Swipe In </p>
+                <form onSubmit={this.logStudent}>
+                    <input autoFocus type="text" ref="login"/>
+                </form>
+
                 <h3> Whose here? </h3>
                 <ul>
                     {displayStudentList}
                 </ul>
+
             </div>
         );
         
