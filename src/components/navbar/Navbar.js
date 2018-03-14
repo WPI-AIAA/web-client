@@ -12,7 +12,7 @@ class Navbar extends Component {
             <div className="Navbar">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
 
-                    <span className="navbar-brand">Navbar</span>
+                    <span className="navbar-brand">AIAA@WPI</span>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
