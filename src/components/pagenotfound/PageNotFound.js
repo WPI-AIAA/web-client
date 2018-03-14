@@ -9,6 +9,7 @@ class PageNotFound extends Component {
         return (
             <div className="PageNotFound">
                 <h1> Page Not Found </h1>
+                <p id="shrug"> ¯\_(ツ)_/¯ </p>
             </div>
         );
 
