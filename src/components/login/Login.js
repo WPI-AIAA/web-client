@@ -1,42 +1,61 @@
 import React, { Component } from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Link} from 'react-router-dom';
 
 import Location from './Location'
+import PageNotFound from '../pagenotfound/PageNotFound';
 
 class Login extends Component {
 
     constructor(props) {
         super(props);
 
-        this.locationList = this.locationList.bind(this);
+        this.displayLocations = this.displayLocations.bind(this);
+
+        this.state = {
+            locationsList: []
+        }
     }
 
-    locationList() {
-        return (
-            <h1> Location Listings </h1>
-        );
+    componentWillMount() {
+        fetch(this.props.sourceURL + "/stats/locations")
+            .then(response => response.json())
+            .then(data => this.setState({ locationsList: data }));
     }
 
-    testing() {
+    displayLocations() {
+
+        let locationLinks;
+
+        if (this.state.locationsList) {
+            locationLinks = this.state.locationsList.map(currentLocation => {
+                return (
+                    <li key={currentLocation.name}>
+                        <Link to={this.props.match.path + "/" + currentLocation.name} style={{textTransform: "capitalize"}}> {currentLocation.name} </Link>
+                        <p> The <span style={{textTransform: "capitalize"}}>{currentLocation.name}</span> is {currentLocation.state} </p>
+                    </li>
+                );
+            });
+        }
+
         return (
-            <h1> Route Testing </h1>
+            <div>
+                <h1> Listings </h1>
+                <ul>
+                    {locationLinks}
+                </ul>
+            </div>
         );
     }
 
     render() {
 
-        console.log(this.props.sourceURL);
-        console.log(this.props.match.path);
-        console.log(this.props.match.path + "/lounge");
-
         return(
             <div className="Login">
-                    <h1> Login </h1>
                     <Switch>
                         <Route exact path={this.props.match.path + "/lounge"} render={({match}) => <Location match={match} locationName={"lounge"} sourceURL={this.props.sourceURL} /> } />
                         <Route exact path={this.props.match.path + "/lab"} render={({match}) => <Location match={match} locationName={"lab"} sourceURL={this.props.sourceURL} />} />
-                        <Route exact path={this.props.match.path + "/test"} component={this.testing} />
-                        <Route path={this.props.match.path} component={this.locationList} />
+                        <Route exact path={this.props.match.path} component={this.displayLocations} />
+                        <Route component={PageNotFound} />
                     </Switch>
             </div>
         );
