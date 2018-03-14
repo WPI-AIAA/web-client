@@ -16,12 +16,11 @@ class Student extends Component {
     render() {
         return(
             <li className = "Student">
-                <span>
-                    {this.props.student.firstName + ' '}
-                    {this.props.student.lastName}
-                </span>
-
-                <button onClick={this.kick}> Kick </button>
+                <button onClick={this.kick}> 
+                    <span>
+                        {this.props.student.firstName + ' ' + this.props.student.lastName}
+                    </span> 
+                </button>
             </li>
         );
     }
