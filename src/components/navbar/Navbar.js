@@ -10,28 +10,23 @@ class Navbar extends Component {
 
         return (
             <div className="Navbar">
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
 
-                    <span className="navbar-brand">AIAA@WPI</span>
-
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <Link className="nav-link" to='/home'> Home </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to='/about'> About </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to='/schedule'> Schedule </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to='/login'> Login </Link>
-                            </li>
-                        </ul>
+                <div className="container">
+                    <div className="row">
+                        <img className="banner-img" src="/images/banners/banner-white-accent.svg" alt="logo" style={{width: '70%'}}/>
+                    </div>
+                    <div className="row">
+                        <nav className="nav">
+                            <span className="nav-link"> <Link className="link" to='/home'> <p className="nav-text">     Home    </p> </Link> </span>
+                            <span className="nav-link"> <Link className="link" to='/about'> <p className="nav-text">    About   </p> </Link> </span>
+                            <span className="nav-link"> <Link className="link" to='/events'> <p className="nav-text">   Events  </p> </Link> </span>
+                            <span className="nav-link"> <Link className="link" to='/login'> <p className="nav-text">    Login   </p> </Link> </span>
+                        </nav>
                     </div>
 
-                </nav>
+
+
+                </div>
             </div>
                 );
         
