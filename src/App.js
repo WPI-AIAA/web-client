@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import "./App.css";
+
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
 import Login from './components/login/Login';
 import About from './components/about/About';
@@ -24,6 +27,7 @@ class App extends Component {
     // Place Holder
     return (
       <div className="App">
+
         <Navbar />
 
         <Switch>
@@ -34,6 +38,8 @@ class App extends Component {
           <Route exact path="/schedule" component={Schedule} />
           <Route component={PageNotFound} />
         </Switch>
+
+        <Footer />
       </div>
     );
 
