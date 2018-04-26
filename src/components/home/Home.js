@@ -8,7 +8,8 @@ class Home extends Component {
 
         return (
             <div className="Home">
-                <h1> Home </h1>
+                <h1 className="intro-text"> Welcome to the American Institute of Aeronautics and Astronautics at WPI! </h1>
+                <div className="slide-show"/>
             </div>
         );
 
