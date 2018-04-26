@@ -1,0 +1,15 @@
+.intro-text{
+    color: #262626;
+    font-size: 22pt;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.slide-show{
+    height: 30em;
+    width: 60%;
+    margin-left: 20%;
+    background-color: #A9B0B7;
+}
