@@ -1,0 +1,26 @@
+.footer-heading, .footer-text, .footer-icon{
+    text-align: left;
+    color: #A9B0B7;
+}
+
+.footer-heading{
+    font-size: 24pt;
+}
+
+.footer-text{
+    font-size: 16pt;
+}
+
+.footer-icon{
+    font-size: 32pt;
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer-break{
+    width: 100%;
+    height: 2px;
+    background-color: #AC2B37;
+    margin-top: 4em;
+}
