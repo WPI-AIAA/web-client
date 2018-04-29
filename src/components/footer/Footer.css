@@ -1,3 +1,7 @@
+.Footer{
+    height: 100%;
+}
+
 .footer-heading, .footer-text, .footer-icon{
     text-align: left;
     color: #A9B0B7;
