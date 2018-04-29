@@ -6,44 +6,44 @@ import './Navbar.css';
 
 class Navbar extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state={
+            activeLinks: [
+                'home',
+                'about',
+                'events',
+                'projects',
+                'login'
+            ]
+        }
+    }
+
+    //                         <Link className="test-link" to='/home'> <p className="test-text"> PROJECTS </p>  </Link>
+
     render() {
+
+        let routeList;
+
+
 
         return (
             <div className="Navbar">
-
-                <div className="container">
-
-                    <nav className="navbar navbar-expand-lg navbar-light">
-                        <img className="banner-img navbar-brand" src="/images/branding/banners/banner-white-accent.svg" alt="logo" style={{width: '20vw'}}/>
-
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"/>
-                        </button>
-
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
-                                <li className="nav-item active">
-                                    <Link className="nav-link" to='/home'>      <p className="nav-text">    HOME    </p> </Link>
-                                    <span className="pipe"/>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to='/about'>     <p className="nav-text">    ABOUT   </p> </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to='/events'>    <p className="nav-text">    EVENTS  </p> </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to='/subcommittees'> <p className="nav-text"> COMMITTEES </p> </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to='/login'>     <p className="nav-text">    LOGIN   </p> </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-
+                <div className="nav-img">
+                    <img src="/images/branding/banners/banner-white-accent.svg" alt="logo" style={{height: '100%', width: 'auto'}}/>
                 </div>
-
+                <ul className="nav-list">
+                    <li className="nav-item"><Link className="nav-link" to="/home"> HOME </Link></li>
+                    <li className="nav-item"><div className="pipe"/></li>
+                    <li className="nav-item"><Link className="nav-link" to="/about"> ABOUT </Link></li>
+                    <li className="nav-item"><div className="pipe"/></li>
+                    <li className="nav-item"><Link className="nav-link" to="/events"> EVENTS </Link></li>
+                    <li className="nav-item"><div className="pipe"/></li>
+                    <li className="nav-item"><Link className="nav-link" to="/projects"> PROJECTS </Link></li>
+                    <li className="nav-item"><div className="pipe"/></li>
+                    <li className="nav-item"><Link className="nav-link" to="/login"> LOGIN </Link></li>
+                </ul>
             </div>
                 );
         

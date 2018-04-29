@@ -1,33 +1,44 @@
 .Navbar{
     background-color: #AC2B37;
-    height: auto;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
 }
 
-.banner-img{
-    margin-right: 1em;
-    margin-left: 2em;
+.nav-img{
+    height: 12vh;
+    padding: 2vh;
+    display: inline-block;
 }
 
-.nav-text{
+
+.nav-link{
     color: #FFF;
-    font-weight: bold;
-    font-size: 14pt;
-    padding-left: 1.2em;
-    padding-right: 1.2em;
+    font-size: 3vh;
+    line-height: 10vh;
+    text-align: center;
+    outline: none;
+}
+
+.nav-link:hover, .nav-link:focus{
+    text-decoration: none;
+    color: #A9B0B7;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    margin-left: 3vh;
+}
+
+.nav-item{
+    display: inline-block;
 }
 
 .pipe{
     width: 2px;
-    height: 100%;
-    background-color: #FFF;
-}
-
-
-a{
-    outline: none;
-}
-
-/* Fix Focus for accessibility reasons */
-a:focus{
-
+    height: 5vh;
+    margin: 1vh;
+    background: #FFF;
 }
