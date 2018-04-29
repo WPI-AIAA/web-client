@@ -28,15 +28,15 @@ class Home extends Component {
                             <li data-targer="#carouselIndicators" data-slide-to="2"/>
                         </ol>
 
-                        <div className="carousel-inner" style={{height: '40em'}}>
+                        <div className="carousel-inner" style={{height: '68vh'}}>
                             <div className="carousel-item active">
-                                <img src="/images/home/test1.png" alt="image" style={{height: "40em", width: 'auto'}}/>
+                                <img src="/images/home/test1.png" alt="image" style={{height: "68vh", width: 'auto'}}/>
                             </div>
                             <div className="carousel-item">
-                                <img src="/images/home/test2.jpg" alt="image" style={{height: "40em", width: 'auto'}}/>
+                                <img src="/images/home/test2.jpg" alt="image" style={{height: "68vh", width: 'auto'}}/>
                             </div>
                             <div className="carousel-item">
-                                <img src="/images/home/test3.jpg" alt="image" style={{height: "40em", width: 'auto'}}/>
+                                <img src="/images/home/test3.jpg" alt="image" style={{height: "68vh", width: 'auto'}}/>
                             </div>
                         </div>
 
