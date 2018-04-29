@@ -3,13 +3,14 @@ import { Route, Switch } from 'react-router-dom';
 
 import "./App.css";
 
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
-import Home from './components/home/Home';
-import Login from './components/login/Login';
-import About from './components/about/About';
-import Schedule from './components/schedule/Schedule';
-import PageNotFound from './components/pagenotfound/PageNotFound';
+import Navbar         from './components/navbar/Navbar';
+import Footer         from './components/footer/Footer';
+import Home           from './components/home/Home';
+import Login          from './components/login/Login';
+import About          from './components/about/About';
+import Events         from './components/events/Events';
+import Projects       from './components/projects/Projects';
+import PageNotFound   from './components/pagenotfound/PageNotFound';
 
 class App extends Component {
 
@@ -18,13 +19,13 @@ class App extends Component {
     // Handle any DB Initialization
 
     this.state = {
-      sourceURL: "http://ec2-13-58-80-79.us-east-2.compute.amazonaws.com:8080"
+      sourceURL: "localhost:8080" //Find an appropriate port number later
     }
   }
 
   render() {
 
-    // Place Holder
+    // TODO: Change Login
     return (
       <div className="App">
 
@@ -35,7 +36,8 @@ class App extends Component {
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About}/>
           <Route path="/login" render={({match}) => <Login match={match} sourceURL={this.state.sourceURL}/>} />
-          <Route exact path="/schedule" component={Schedule} />
+          <Route exact path="/events" component={Events} />
+          <Route exact path="/projects" component={Projects} />
           <Route component={PageNotFound} />
         </Switch>
 
