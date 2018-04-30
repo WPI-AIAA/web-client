@@ -20,13 +20,21 @@ class Navbar extends Component {
         }
     }
 
-    //                         <Link className="test-link" to='/home'> <p className="test-text"> PROJECTS </p>  </Link>
+    // <Link className="test-link" to='/home'> <p className="test-text"> PROJECTS </p>  </Link>
 
     render() {
 
         let routeList;
 
+        if(this.state.activeLinks){
+            // Map through the activeLinks list
+            routeList = this.state.activeLinks.map(currentLink => {
 
+                return (
+                    <li className="nav-item"><Link className="nav-link" to={'/' + currentLink}> {currentLink.toUpperCase()} </Link></li>
+                );
+            });
+        }
 
         return (
             <div className="Navbar">
@@ -34,18 +42,10 @@ class Navbar extends Component {
                     <img src="/images/branding/banners/banner-white-accent.svg" alt="logo" style={{height: '100%', width: 'auto'}}/>
                 </div>
                 <ul className="nav-list">
-                    <li className="nav-item"><Link className="nav-link" to="/home"> HOME </Link></li>
-                    <li className="nav-item"><div className="pipe"/></li>
-                    <li className="nav-item"><Link className="nav-link" to="/about"> ABOUT </Link></li>
-                    <li className="nav-item"><div className="pipe"/></li>
-                    <li className="nav-item"><Link className="nav-link" to="/events"> EVENTS </Link></li>
-                    <li className="nav-item"><div className="pipe"/></li>
-                    <li className="nav-item"><Link className="nav-link" to="/projects"> PROJECTS </Link></li>
-                    <li className="nav-item"><div className="pipe"/></li>
-                    <li className="nav-item"><Link className="nav-link" to="/login"> LOGIN </Link></li>
+                    {routeList}
                 </ul>
             </div>
-                );
+        );
         
             }
         }
