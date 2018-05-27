@@ -48,3 +48,45 @@
     margin-bottom: 2vh;
     text-align: left;
 }
+
+.table thead>tr>th{
+    border: 0px solid;
+}
+
+.about-tableHeading{
+    background: #AC2B37;
+    color: #FFF;
+    font-family: myriadPro-Semibold;
+    font-size: 2vh;
+    line-height: 2vh;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: left;
+}
+
+.about-tableBold{
+    color: #262626;
+    font-family: myriadPro-Semibold;
+    font-size: 2vh;
+    line-height: 2.5vh;
+    margin-left: 0vw;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    text-align: left;
+}
+
+.about-tableLight{
+    color: #A9B0B7;
+    font-size: 1.5vh;
+    line-height: 2vh;
+    margin-left: 0vw;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    text-align: left;
+}
+
+.about-tableRow{
+    border-bottom: solid #A9B0B7;
+    border-bottom-width: 2px;
+}

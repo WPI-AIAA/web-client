@@ -29,7 +29,62 @@ class About extends Component {
                     </p>
                     <h2 className="about-subheading"> Leadership </h2>
                     <img className="leadership-img" src="/images/home/test3.jpg" alt="AIAA Officers"/>
-
+                    <div className="container col-md-8 col-md-offset-2">
+                        <div className="table-responsive" >
+                            <table className="table">
+                                <thead>
+                                <tr className="about-tableHeading">
+                                    <th>Position</th>
+                                    <th>Name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr className="about-tableRow">
+                                    <td>
+                                        <p className="about-tableBold">Chairman</p>
+                                        <p className="about-tableLight">Management, Recruitment, Meetings</p>
+                                    </td>
+                                    <td className="td about-tableBold">Isaiah Fleischer</td>
+                                </tr>
+                                <tr className="about-tableRow">
+                                    <td>
+                                        <p className="about-tableBold">Vice-Chairman</p>
+                                        <p className="about-tableLight">Backup to Chairman, Subcommittee Organization</p>
+                                    </td>
+                                    <td className="about-tableBold">Peter Dohn</td>
+                                </tr>
+                                <tr className="about-tableRow">
+                                    <td>
+                                        <p className="about-tableBold">Treasurer</p>
+                                        <p className="about-tableLight">Budget Management</p>
+                                    </td>
+                                    <td className="about-tableBold">Kyle Foster</td>
+                                </tr>
+                                <tr className="about-tableRow">
+                                    <td>
+                                        <p className="about-tableBold">Secretary</p>
+                                        <p className="about-tableLight">Meeting Notes, Internal Communication</p>
+                                    </td>
+                                    <td className="about-tableBold">Steffany Halfrey</td>
+                                </tr>
+                                <tr className="about-tableRow">
+                                    <td>
+                                        <p className="about-tableBold">Public Relations</p>
+                                        <p className="about-tableLight">Marketing Management, External Communication</p>
+                                    </td>
+                                    <td className="about-tableBold">Jarod Romankiw</td>
+                                </tr>
+                                <tr className="about-tableRow">
+                                    <td>
+                                        <p className="about-tableBold">Faculty Adviser</p>
+                                        <p className="about-tableLight">Oversee Club Activities</p>
+                                    </td>
+                                    <td className="about-tableBold">John Blandino, PhD</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
 
