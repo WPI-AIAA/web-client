@@ -5,12 +5,16 @@ import "./App.css";
 
 import Navbar         from './components/navbar/Navbar';
 import Footer         from './components/footer/Footer';
+
 import Home           from './components/home/Home';
 import Login          from './components/login/Login';
 import About          from './components/about/About';
 import Events         from './components/events/Events';
 import Projects       from './components/projects/Projects';
 import PageNotFound   from './components/pagenotfound/PageNotFound';
+
+import Admin          from './components/admin/Admin';
+
 
 class App extends Component {
 
@@ -38,6 +42,7 @@ class App extends Component {
           <Route path="/login" render={({match}) => <Login match={match} sourceURL={this.state.sourceURL}/>} />
           <Route exact path="/events" component={Events} />
           <Route exact path="/projects" component={Projects} />
+          <Route exact path="/admin" component={Admin} />
           <Route component={PageNotFound} />
         </Switch>
 
