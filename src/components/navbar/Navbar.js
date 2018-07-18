@@ -20,16 +20,14 @@ class Navbar extends Component {
         }
     }
 
-    // <Link className="test-link" to='/home'> <p className="test-text"> PROJECTS </p>  </Link>
-
     render() {
 
         let routeList;
 
         if(this.state.activeLinks){
+
             // Map through the activeLinks list
             routeList = this.state.activeLinks.map(currentLink => {
-
                 return (
                     <li className="nav-item"><Link className="nav-link" to={'/' + currentLink}> {currentLink.toUpperCase()} </Link></li>
                 );
@@ -46,8 +44,7 @@ class Navbar extends Component {
                 </ul>
             </div>
         );
-        
-            }
-        }
+    }
+}
         
         export default Navbar;
