@@ -1,0 +1,86 @@
+.aboutContainer{
+    width: 50%;
+    margin: auto;
+}
+
+.aboutBreak{
+    height: 1px;
+    border: 0;
+    background-color: #145B9E;
+}
+
+.aboutHeader{
+    text-align: center;
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-size: 16pt;
+    line-height: 18pt;
+    padding: 14pt 0 6pt 0;
+    color: #1A1A1A;
+}
+
+.aboutSubHeader{
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-size: 14pt;
+    padding: 9pt 0 5pt 0;
+    color: #145B9E;
+}
+
+.aboutGeneralText{
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 12pt;
+    line-height: 18pt;
+    padding: 5pt 0 5pt 0;
+    color: #1A1A1A;
+}
+
+.aboutTable{
+    width: 70%;
+    padding-top: 16pt;
+    margin: auto;
+}
+
+.aboutTableHeader{
+    font-size: 12pt;
+    line-height: 22pt;
+    background-color: #145B9E;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.aboutTableHeaderText{
+    font-family: Montserrat-SemiBold, sans-serif;
+    padding-left: 16pt;
+    color: #F1F2F2;
+}
+
+.aboutTableRow{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10pt 0 10pt 0;
+    border-bottom: 1px solid #A9B0B7;
+}
+
+.aboutTableDetails{
+    padding-left: 16pt;
+}
+
+.aboutTablePosition{
+    font-family: Montserrate-SemiBoldItalic, sans-serif;
+    font-size: 12pt;
+    color: #1A1A1A;
+}
+
+.aboutTableDuties{
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 12pt;
+    color: #A9B0B7;
+}
+
+.aboutTableName{
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-size: 12pt;
+    color: #1A1A1A;
+    padding-left: 16pt;
+    padding-top: 8pt;
+}

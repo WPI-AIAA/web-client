@@ -1,0 +1,41 @@
+.Slider{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #F1F2F2;
+
+}
+
+.Slide{
+    height: 92.5vh;
+}
+
+.slideImage{
+    height: 100%;
+    max-width: 100%;
+}
+
+.slideText{
+    height: 40pt;
+    text-align: right;
+    position: relative;
+    bottom: 100pt;
+    right: 50pt;
+    color: #F1F2F2;
+}
+
+.slideHeader{
+    font-family: Montserrate-SemiBoldItalic, sans-serif;
+    line-height: 48pt;
+    font-size: 40pt;
+    text-shadow: 5px 5px 8px #1A1A1A;
+}
+
+.slideSubHeader{
+    font-family: Montserrate-SemiBoldItalic, sans-serif;
+    line-height: 22pt;
+    font-size: 18pt;
+    text-shadow: 5px 5px 8px #1A1A1A;
+
+}
