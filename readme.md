@@ -3,7 +3,13 @@ Worcester Polytechnic Institute's AIAA website.
 
 
 ## About
-Built using [react](http://reactjs.org) and [react-router-dom](http://reacttraining.com/react-router/)
+Built using [react](http://reactjs.org)
+
+## Dependencies
+1. [react-router](https://www.npmjs.com/package/react-router) & [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+2. [flux](https://facebook.github.io/flux/docs/overview.html)
+3. [axios](https://github.com/axios/axios)
+4. [FontAwesome](http://fontawesome.com) & [react-fontawesome](https://www.npmjs.com/package/react-fontawesome)
 
 ### Setup for Development
 1. Ensure [nodejs](http://nodejs.org) is installed.
@@ -49,5 +55,5 @@ Built using [react](http://reactjs.org) and [react-router-dom](http://reacttrain
     ```
 5. Host the production build
     ```bash
-    nohup sudo serve -s -p 80 </dev/null &
+    nohup sudo serve -l 80 -s build </dev/null 2>&1 &
     ```
