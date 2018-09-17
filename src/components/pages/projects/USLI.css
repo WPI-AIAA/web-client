@@ -1,0 +1,47 @@
+.fileItem{
+    display: block;
+}
+
+.fileItemTitle{
+    color: #145B9E;
+    display: flex;
+    padding: 2pt 0 2pt 0;
+}
+
+.fileItemTitle:hover{
+    color: #1A1A1A;
+    background-color: #145B9E;
+}
+
+.fileItemName{
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 18pt;
+    padding: 1pt;
+    color: #1A1A1A;
+}
+
+.fileItemList{
+    padding-left: 30pt;
+    display: block;
+}
+
+.usliHeader{
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-size: 14pt;
+    padding: 0 0 5pt 0;
+    color: #145B9E;
+}
+
+.usliText{
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 12pt;
+    line-height: 18pt;
+    padding: 5pt 0 5pt 0;
+    color: #1A1A1A;
+}
+
+.usliBreak{
+    height: 1px;
+    border: 0;
+    background-color: #145B9E;
+}

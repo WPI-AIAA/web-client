@@ -1,0 +1,50 @@
+.directoryTitle, .fileTitle{
+    display: flex;
+    height: 24pt;
+}
+
+.directorySpacer, .fileSpacer{
+    color: #1A1A1A;
+    font-size: 24pt;
+    width: 20pt;
+    display: flex;
+    justify-content: center;
+}
+
+.directoryIconContainer, .fileIconContainer{
+    width: 30pt;
+    display: flex;
+    justify-content: center;
+}
+
+.fileIcon, .directoryIcon{
+    font-size: 18pt;
+    padding: 0 5pt 0 5pt;
+    color: #1A1A1A;
+    height: 100%;
+}
+
+.directoryName, .fileName{
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 18pt;
+    color: #1A1A1A;
+}
+
+.directoryChildren{
+    padding-left: 20pt;
+}
+
+
+
+
+.fileTitle:hover, .fileName:hover{
+    color: #145B9E;
+}
+
+
+
+.directoryName, .fileName{
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 18pt;
+    color: #1A1A1A;
+}
