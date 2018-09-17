@@ -1,6 +1,6 @@
 # WPI AIAA Website
-Worcester Polytechnic Institute's AIAA website.
-
+Worcester Polytechnic Institute's AIAA Student Chapter's website.
+Public at [aiaa.wpi.edu](http://aiaa.wpi.edu)
 
 ## About
 Built using [react](http://reactjs.org)
@@ -21,7 +21,7 @@ Built using [react](http://reactjs.org)
     ```
 3. Clone the repository
     ```bash
-    git clone https://github.com/WPI-AIAA/web-client.git  
+    git clone https://github.com/WPI-AIAA/web-client.git
     ```
 4. Change directories into the repository
     ```bash
