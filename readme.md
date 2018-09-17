@@ -55,5 +55,5 @@ Built using [react](http://reactjs.org)
     ```
 5. Host the production build
     ```bash
-    nohup sudo serve -l 80 -s build </dev/null 2>&1 &
+    nohup sudo serve -l 80 -s build >/dev/null 2>&1 &
     ```
