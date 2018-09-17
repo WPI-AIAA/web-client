@@ -1,0 +1,48 @@
+.Navbar{
+    height: 7.5vh;
+    width: 100%;
+    background-color: #145B9E;
+}
+
+.navContent{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+
+.navImageContainer{
+    height: 7.5vh;
+    margin: auto;
+}
+
+.navImage{
+    height: 6vh;
+    padding-top: 0.75vh;
+}
+
+.navItemList{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.navItem{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.navLink{
+    text-decoration: none;
+    outline: none;
+    line-height: 7.5vh;
+
+    color: #F1F2F2;
+    font-size: 16pt;
+    font-family: Montserrat-SemiBold, sans-serif;
+}
+
+.navLink:hover, .navLink:focus {
+    text-decoration: none;
+    color: #A9B0B7;
+}
