@@ -6,10 +6,12 @@ class Slide extends Component {
 
     render() {
 
-        if(this.props.image && this.props.header && this.props.subHeader){
+        let isHidden = true;
+
+        if(this.props.slide === this.props.index){
             return (
-                <div className="Slide">
-                    <img className={"slideImage"} src={this.props.image} alt={this.props.header} />
+                <div className="Slide" key={this.props.index}>
+                    <img className={"slideImage"} src={this.props.path} alt={this.props.header} />
                     <div className={"slideText"}>
                         <p className={"slideHeader"}> {this.props.header} </p>
                         <p className={"slideSubHeader"}> {this.props.subHeader} </p>
@@ -17,13 +19,7 @@ class Slide extends Component {
                 </div>
             );
         } else {
-            console.log("Carousel failed to load and image");
-            this.forceUpdate();
-            return (
-                <div>
-                    <p> Something went wrong with the carousel. </p>
-                </div>
-            );
+            return null;
         }
     }
 }

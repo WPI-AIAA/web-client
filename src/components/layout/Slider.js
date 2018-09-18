@@ -3,70 +3,52 @@ import Slide from './Slide';
 
 import './Slider.css';
 
-import SliderStore from '../store/SliderStore';
-
 class Slider extends Component {
 
     constructor(props){
         super(props);
 
-        if(props.images){
-            props.images.map(image => {
-                SliderStore.addImage(image);
-            });
-        }
+        this.state = {
+            slideIndex: 0
+        };
 
-        if(props.interval){
-            SliderStore.updateInterval(props.interval);
-        }
-
-        this.state={
-            image: SliderStore.getCurrentImage()
-        }
-
+        this.interval = null;
     }
 
     componentDidMount(){
-        // Add a listener
-        SliderStore.on("change", ()=>{
-            this.setState({image: SliderStore.getCurrentImage()});
-        });
+
+        this.interval = setInterval(() =>{
+            let index = this.state.slideIndex + 1;
+
+            if(index < this.props.images.length){
+                this.setState({slideIndex: index});
+            } else {
+                this.setState({slideIndex: 0});
+            }
+
+            console.log("Slide Index: " + this.state.slideIndex);
+        } , 5000);
+
     }
 
     componentWillUnmount(){
-        // Remove the listener so that Slider is not asked to change state when it is not rendered
-        SliderStore.removeAllListeners("change");
-    }
 
-    getImageHeader(name){
-        // In rare cases name may not be defined when this is called.
-        if(name){
-            return (name.substring(0, name.lastIndexOf('$')));
-        } else {
-            return "";
-        }
-    }
-
-    getImageSubHeader(name){
-        // In rare cases name may not be defined when this is called.
-        if(name){
-            return (name.substring(name.lastIndexOf('$') + 1, name.lastIndexOf('.')));
-        } else {
-            return "";
-        }
+        clearInterval(this.interval);
     }
 
     render() {
 
-        let settings = {
-            image: this.props.src + this.state.image,
-            header: this.getImageHeader(this.state.image),
-            subHeader: this.getImageSubHeader(this.state.image)
-        };
+        let slides = [];
+
+        this.props.images.forEach( image => {
+            slides.push(
+                <Slide slide={this.state.slideIndex} {...image}/>
+            );
+        });
 
         return (
             <div className="Slider">
-                <Slide {...settings} />
+                {slides}
             </div>
         );
     }
