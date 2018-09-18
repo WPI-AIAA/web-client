@@ -26,11 +26,11 @@ class USLIFileStore extends EventEmitter {
 
     getFile(name){
 
-        axios.get("http://localhost:8282/files/usli/element?filePath=" + name)
+        axios.get("http://localhost:8282/files/usli/get?filePath=" + name)
             .then( res => {
                 // Must be res.status == "200" despite recommendations to change to ===
                 if(res.status == "200"){
-                    window.open("http://localhost:8282/files/usli/element?filePath=" + name, '_blank');
+                    window.open("http://localhost:8282/files/usli/get?filePath=" + name, '_blank');
                 } else {
                     console.log("The file was unable to be loaded!");
                 }
